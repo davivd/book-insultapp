@@ -13,6 +13,6 @@ public class Tototo {
 	@GET()
 	@Produces("application/json")
 	public String getInsult() {
-		return "toto";
+		return "toto" + System.getenv("TEST");
 	}
 }
