@@ -13,6 +13,10 @@ public class Tototo {
 	@GET()
 	@Produces("application/json")
 	public String getInsult() {
-		return "toto" + System.getenv("TEST");
+		String csTest = System.getenv("TEST");
+		if(csTest == null)
+			return "null";
+		else
+			return "toto" + System.getenv("TEST");
 	}
 }
